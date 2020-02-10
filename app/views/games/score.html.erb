@@ -1,0 +1,17 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <% if @include && @english_word %>
+      <%= "Congratulations! #{@guess} is a valid English Word" %>
+    <% elsif @include == false %>
+      <%= "Sorry but #{@guess} can't be build out of #{@letters}" %>
+    <% elsif @english_word == false %>
+      <%= "Sorry but #{@guess} does not seemo be a valid English word..." %>
+    <% end %>
+
+  </body>
+</html>
